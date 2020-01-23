@@ -3,10 +3,13 @@ version: 3
 projects:
 - dir: non-prod/stage/eu-west-1
   workflow: terragrunt
+  terraform_version: v0.12.19
 - dir: non-prod/stage/eu-west-2
   workflow: terragrunt
+  terraform_version: v0.12.19
 - dir: non-prod/stage/eu-west-3
   workflow: terragrunt
+  terraform_version: v0.12.19
 workflows:
   terragrunt:
     plan:
