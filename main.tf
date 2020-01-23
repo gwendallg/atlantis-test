@@ -23,4 +23,4 @@ output "test3" {
 
 output "test4" {
   value = "my test"
-}
+
