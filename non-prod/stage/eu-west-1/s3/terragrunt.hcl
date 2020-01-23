@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 terraform {
-  source = "../../../_modules/s3//"
+  source = "../../../../_modules/s3//"
 }
 
 # Include all settings from the root terraform.tfvars file
