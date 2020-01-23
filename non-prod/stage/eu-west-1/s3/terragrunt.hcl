@@ -12,5 +12,5 @@ include {
 }
 
 inputs = {
-    bucket_name = "mynouveqsd"
+    bucket_name = "newbucket"
 }
