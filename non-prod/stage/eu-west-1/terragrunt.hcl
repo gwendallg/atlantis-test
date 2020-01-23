@@ -1,4 +1,3 @@
- Aws s3 bucket for save configuration
 remote_state {
   backend = "s3"
   config = {
