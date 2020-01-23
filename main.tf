@@ -20,3 +20,7 @@ output "test2" {
 output "test3" {
   value = "my test"
 }
+
+output "test4" {
+  value = "my test"
+}
