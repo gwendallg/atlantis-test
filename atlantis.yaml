@@ -14,7 +14,6 @@ workflows:
   terragrunt:
     plan:
       steps:
-      - run: terragrunt init-all -no-color
       - run: terragrunt plan-all -no-color -out "${PLANFILE}"
     apply:
       steps:
