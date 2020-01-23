@@ -1,21 +1,20 @@
-version: 2
+version: 3
 
 projects:
-- name: monrepor
-  dir: .
-  workspace: default
-  terraform_version: 0.12.19
-  autoplan:
-    when_modified: ["*.tf", "../modules/**.tf"]
-    enabled: true
-  apply_requirements: [mergeable, approved]
-  workflow: default
+- dir: non-prod/stage/eu-west-1
+  workflow: terragrunt
+  terraform_version: v0.12.19
+- dir: non-prod/stage/eu-west-2
+  workflow: terragrunt
+  terraform_version: v0.12.19
+- dir: non-prod/stage/eu-west-3
+  workflow: terragrunt
+  terraform_version: v0.12.19
 workflows:
-  default:
+  terragrunt:
     plan:
       steps:
-      - run: terraform init -no-color
-      - run: terraform plan -no-color -out "${PLANFILE}"
+      - run: terragrunt plan-all --terragrunt-non-interactive -no-color -out "${PLANFILE}"
     apply:
       steps:
-      - run: terraform apply -no-color "${PLANFILE}"
+      - run: terragrunt apply-all -no-color "${PLANFILE}"
