@@ -4,12 +4,21 @@ projects:
 - dir: non-prod/stage/eu-west-1
   workflow: terragrunt
   terraform_version: v0.12.19
+  autoplan:
+    when_modified: ["*.tf", "../_modules/**.tf"]
+    enabled: true
 - dir: non-prod/stage/eu-west-2
   workflow: terragrunt
   terraform_version: v0.12.19
+  autoplan:
+    when_modified: ["*.tf", "../_modules/**.tf"]
+    enabled: true
 - dir: non-prod/stage/eu-west-3
   workflow: terragrunt
   terraform_version: v0.12.19
+  autoplan:
+    when_modified: ["*.tf", "../_modules/**.tf"]
+    enabled: true
 workflows:
   terragrunt:
     plan:
@@ -17,4 +26,4 @@ workflows:
       - run: terragrunt plan-all --terragrunt-non-interactive -no-color -out "${PLANFILE}"
     apply:
       steps:
-      - run: terragrunt apply-all -no-color "${PLANFILE}"
+      - run: terragrunt apply-all --terragrunt-non-interactive -no-color "${PLANFILE}"
