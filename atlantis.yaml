@@ -3,6 +3,7 @@ version: 3
 projects:
 - name: stage_eu-west-1
   dir: non-prod/stage/eu-west-1
+  workspace: stage_eu-west-1
   workflow: terragrunt
   terraform_version: v0.12.19
   autoplan:
@@ -10,6 +11,7 @@ projects:
     enabled: true
 - name: stage_eu-west-3
   dir: non-prod/stage/eu-west-3
+  workspace: stage_eu-west-3
   workflow: terragrunt
   terraform_version: v0.12.19
   autoplan:
