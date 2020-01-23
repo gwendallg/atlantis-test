@@ -10,7 +10,7 @@ provider "aws" {
 data "aws_caller_identity" "current" {}
 
 resource "aws_s3_bucket" "this" {
-  bucket = "${data.aws_caller_identity.current.account_id}-${var.environment}-${var.bucket_name}"
+  bucket = "${data.aws_caller_identity.current.account_id}-${var.environment}-${var.bucket_name}-2"
   acl    = "private"
 
   tags = {
