@@ -13,4 +13,6 @@ output "test" {
   value = "my test"
 }
 
-
+output "test2" {
+  value = "my test"
+}
