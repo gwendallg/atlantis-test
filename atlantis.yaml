@@ -8,11 +8,12 @@ projects:
     when_modified: ["*.tf", "../modules/**.tf"]
     enabled: true
   apply_requirements: [mergeable, approved]
-  workflow:
-    default:
-      plan:
-        steps:
+  workflow: myworkflow
+workflows:
+  myworkflow:
+    plan:
+      steps:
         - run: terraform plan -no-color -out "${PLANFILE}"
-      apply:
-        steps:
+    apply:
+      steps:
         - run: terraform apply -no-color "${PLANFILE}"
