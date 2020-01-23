@@ -13,6 +13,4 @@ output "test" {
   value = "my test"
 }
 
-output "test3" {
-    value ="test"
-}
+
