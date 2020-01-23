@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 terraform {
-  source = "../../../_modules/iam-rotate-credentials//"
+  source = "../../../_modules/s3//"
 }
 
 # Include all settings from the root terraform.tfvars file
