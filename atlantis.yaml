@@ -1,9 +1,11 @@
 version: 3
 
 projects:
-- dir: non-prod/stage/eu-west-3
+- dir: non-prod/stage/eu-west-1
   workflow: terragrunt
 - dir: non-prod/stage/eu-west-2
+  workflow: terragrunt
+- dir: non-prod/stage/eu-west-3
   workflow: terragrunt
 workflows:
   terragrunt:
