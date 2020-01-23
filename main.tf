@@ -16,3 +16,11 @@ output "test" {
 output "test2" {
   value = "my test"
 }
+
+output "test3" {
+  value = "my test"
+}
+
+output "test4" {
+  value = "my test"
+}
