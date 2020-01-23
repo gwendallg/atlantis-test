@@ -6,3 +6,7 @@ provider "aws" {
 output "test" {
   value = "my test"
 }
+
+output "test2" {
+    value ="test"
+}
