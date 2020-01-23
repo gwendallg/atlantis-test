@@ -14,7 +14,7 @@ workflows:
   default:
     plan:
       steps:
-      - run: terraform init"  
+      - run: terraform init -no-color
       - run: terraform plan -no-color -out "${PLANFILE}"
     apply:
       steps:
