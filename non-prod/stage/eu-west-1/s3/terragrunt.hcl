@@ -12,5 +12,5 @@ include {
 }
 
 inputs = {
-    bucket_name = "news3"
+    bucket_name = "mynouveqsd"
 }
