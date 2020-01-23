@@ -1,0 +1,21 @@
+version: 2
+
+projects:
+- name: monrepor
+  dir: .
+  workspace: default
+  terraform_version: 0.12.19
+  autoplan:
+    when_modified: ["*.tf", "../modules/**.tf"]
+    enabled: true
+  apply_requirements: [mergeable, approved]
+  workflow: default
+workflows:
+  default:
+    plan:
+      steps:
+      - run: terraform init -no-color
+      - run: terraform plan -no-color -out "${PLANFILE}"
+    apply:
+      steps:
+      - run: terraform apply -no-color "${PLANFILE}"
