@@ -4,6 +4,8 @@ projects:
 - dir: non-prod/stage/eu-west-1
   workflow: terragrunt
   terraform_version: v0.12.19
+  autoplan:
+    when_modified: ["./**/**/*.hcl"]
 - dir: non-prod/stage/eu-west-3
   workflow: terragrunt
   terraform_version: v0.12.19
