@@ -12,5 +12,5 @@ include {
 }
 
 inputs = {
-    bucket_name = "ceci"
+    bucket_name = "mon-repo"
 }
