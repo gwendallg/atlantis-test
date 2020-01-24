@@ -5,6 +5,7 @@ terraform {
 provider "aws" {
   version = ">=2.8"
   region  = var.aws_region
+  profile = var.aws-profile
 }
 
 data "aws_caller_identity" "current" {}

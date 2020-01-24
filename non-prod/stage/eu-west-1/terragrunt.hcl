@@ -6,6 +6,7 @@ remote_state {
     key            = "stage/eu-west-1/${path_relative_to_include()}/terraform.tfstate"
     region         = "eu-west-3"
     dynamodb_table = "terraform-locks"
+    profile        = "adv-ops"
   }
 }
 
@@ -14,6 +15,7 @@ inputs = {
   # environmental informations
   aws_region                    = "eu-west-1"
   environment                   = "stage"
+  profile                       = "adv-ops"
 
   # S3 bucket tfstate informations
   tfstate_global_bucket        = "${get_aws_account_id()}-global-infrastructure-live"
