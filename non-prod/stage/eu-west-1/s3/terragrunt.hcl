@@ -12,5 +12,5 @@ include {
 }
 
 inputs = {
-    bucket_name = "toto"
+    bucket_name = "my-toto"
 }
