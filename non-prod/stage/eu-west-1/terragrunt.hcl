@@ -20,7 +20,6 @@ inputs = {
   # S3 bucket tfstate informations
   tfstate_global_bucket        = "${get_aws_account_id()}-global-infrastructure-live"
   tfstate_global_bucket_region = "eu-west-3"
-
   #role_arn = "arn:aws:iam::982489228146:role/AdventielAutomationAccessRole"
 
 }
