@@ -12,5 +12,5 @@ include {
 }
 
 inputs = {
-    bucket_name = "this-new"
+    bucket_name = "nouveau"
 }
