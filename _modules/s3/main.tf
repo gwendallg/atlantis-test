@@ -6,7 +6,7 @@ provider "aws" {
   version = ">=2.8"
   region  = var.aws_region
   assume_role {
-    role_arn = var.role_arn
+    session_name = "DEV_test_atlantis"                                                                                  
   }
 }
 
