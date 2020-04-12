@@ -18,10 +18,16 @@ workflows:
       - env:
           name: AWS_DEFAULT_PROFILE
           value: adv-ops
+      - env:
+          name: TERRAGRUNT_IAM_ROLE
+          value: arn:aws:iam::446381716460:role/982489228146-cross-account-administrator-access
       - run: terragrunt plan-all --terragrunt-non-interactive -no-color -out "${PLANFILE}"
     apply:
       steps:
       - env:
           name: AWS_DEFAULT_PROFILE
           value: adv-ops
+      - env:
+          name: TERRAGRUNT_IAM_ROLE
+          value: arn:aws:iam::446381716460:role/982489228146-cross-account-administrator-access
       - run: terragrunt apply-all --terragrunt-non-interactive -no-color "${PLANFILE}"
